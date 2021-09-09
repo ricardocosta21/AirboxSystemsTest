@@ -1,0 +1,46 @@
+﻿<Properties StartupConfiguration="{9BFE422E-BAE4-49A7-8DBD-AFA1F4DE2D4C}|Default">
+  <MonoDevelop.Ide.ItemProperties.AirboxSystems.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirboxSystems.API/Persistence/Contexts/AppDbContext.cs">
+    <Files>
+      <File FileName="AirboxSystems.API/Persistence/Contexts/AppDbContext.cs" Line="1" Column="1" />
+      <File FileName="AirboxSystems.API/Controllers/UserLocationController.cs" />
+      <File FileName="AirboxSystems.API/Persistence/Repositories/IUnitOfWork.cs" />
+      <File FileName="AirboxSystems.API/Persistence/Repositories/BaseRepository.cs" />
+      <File FileName="AirboxSystems.API/Services/UserLocation/IUserLocationService.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="AirboxSystems.API/Services/UserLocation/UserLocationService.cs" NotebookId="1" />
+      <File FileName="AirboxSystems.API/Persistence/Repositories/IUserLocationRepository.cs" NotebookId="1" />
+      <File FileName="AirboxSystems.API/Domain/Models/UserPosition.cs" NotebookId="1" />
+      <File FileName="docker-compose.yml" NotebookId="1" />
+      <File FileName="AirboxSystems.API/appsettings.json" NotebookId="1" />
+      <File FileName="AirboxSystems.API/.env" NotebookId="1" />
+      <File FileName="AirboxSystems.API/Properties/launchSettings.json" NotebookId="1" />
+      <File FileName="docker-compose.override.yml" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AirboxSystemsTest" expanded="True">
+            <Node name="AirboxSystems.API" expanded="True">
+              <Node name="Persistence" expanded="True">
+                <Node name="Contexts" expanded="True">
+                  <Node name="AppDbContext.cs" selected="True" />
+                </Node>
+                <Node name="Repositories" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+            </Node>
+            <Node name="docker-compose" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.AirboxSystems.UnitTests FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

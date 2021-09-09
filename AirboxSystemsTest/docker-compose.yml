@@ -1,0 +1,48 @@
+version: '3.4'
+
+services:
+  airboxsystems.api:
+    image: ${DOCKER_REGISTRY-}airboxsystems
+    build:
+      context: .
+      dockerfile: AirboxSystems.API/Dockerfile
+    ports:
+      - "8000:80"
+      - "44348:443"
+    networks:
+      - backend
+    depends_on:
+      - mongo
+    environment:
+      ME_CONFIG_APIKEY: $REST_API_APIKEY
+      ME_CONFIG_DBSTRING: "mongodb://${MONGODB_APPLICATION_USER}:${MONGODB_APPLICATION_PASS}@mongo:27017/${MONGODB_APPLICATION_DATABASE}"
+    volumes:
+      - mongostorage:/data/db
+    links:
+      - mongo
+
+
+  mongo:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongostorage:/data/db
+    networks:
+      - backend
+    environment:
+      MONGODB_ADMIN_USER: $MONGODB_ADMIN_USER
+      MONGODB_ADMIN_PASS: $MONGODB_ADMIN_PASS
+      MONGODB_APPLICATION_DATABASE: $MONGODB_APPLICATION_DATABASE
+      MONGODB_APPLICATION_USER: $MONGODB_APPLICATION_USER
+      MONGODB_APPLICATION_PASS: $MONGODB_APPLICATION_PASS
+
+volumes:
+  mongostorage:
+
+networks:
+  backend:
+    driver: bridge

@@ -1,0 +1,16 @@
+services:
+  airboxsystems.api:
+    build:
+      context: /Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest
+      dockerfile: AirboxSystems.API/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: airboxsystems
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - /Users/ricardocosta/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/ricardocosta/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

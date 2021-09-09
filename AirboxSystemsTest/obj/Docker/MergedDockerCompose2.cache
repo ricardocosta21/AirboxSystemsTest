@@ -1,0 +1,70 @@
+networks:
+  backend:
+    driver: bridge
+services:
+  airboxsystems.api:
+    build:
+      context: /Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest
+      dockerfile: AirboxSystems.API/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: AirboxSystems.API
+      target: base
+    container_name: AirboxSystems.API
+    depends_on:
+      mongo:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      ME_CONFIG_APIKEY: ''
+      ME_CONFIG_DBSTRING: mongodb://:@mongo:27017/
+      NUGET_FALLBACK_PACKAGES: ''
+    image: airboxsystems:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/AirboxSystems.API.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    links:
+    - mongo
+    networks:
+      backend: {}
+    ports:
+    - published: 8000
+      target: 80
+    - target: 80
+    - published: 44348
+      target: 443
+    - target: 443
+    tty: true
+    volumes:
+    - /Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.API:/app:rw
+    - mongostorage:/data/db:rw
+    - /Users/ricardocosta/vsdbg/vs2017u5:/remote_debugger:rw
+    - /Users/ricardocosta/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/ricardocosta/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    - /Users/ricardocosta/.nuget/packages:/root/.nuget/packages:ro
+    - /Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest:/src:rw
+  mongo:
+    environment:
+      MONGODB_ADMIN_PASS: ''
+      MONGODB_ADMIN_USER: ''
+      MONGODB_APPLICATION_DATABASE: ''
+      MONGODB_APPLICATION_PASS: ''
+      MONGODB_APPLICATION_USER: ''
+    image: mongo:latest
+    networks:
+      backend: {}
+    ports:
+    - published: 27017
+      target: 27017
+    volumes:
+    - mongostorage:/data/db:rw
+version: '3.4'
+volumes:
+  mongostorage: {}
