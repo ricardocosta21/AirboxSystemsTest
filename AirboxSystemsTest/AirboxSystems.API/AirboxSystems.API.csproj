@@ -10,8 +10,6 @@
     <None Remove="Services\UserLocation\" />
     <None Remove="Domain\" />
     <None Remove="Domain\Models\" />
-    <None Remove="Resources\" />
-    <None Remove="Mapping\" />
     <None Remove="AutoMapper" />
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <None Remove="Microsoft.EntityFrameworkCore" />
@@ -19,13 +17,12 @@
     <None Remove="Microsoft.EntityFrameworkCore.InMemory" />
     <None Remove="MongoDB.Driver" />
     <None Remove="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+    <None Remove="MongoDB.Entities" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\UserLocation\" />
     <Folder Include="Domain\" />
     <Folder Include="Domain\Models\" />
-    <Folder Include="Resources\" />
-    <Folder Include="Mapping\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
@@ -35,5 +32,6 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.9" />
     <PackageReference Include="MongoDB.Driver" Version="2.13.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.9" />
+    <PackageReference Include="MongoDB.Entities" Version="20.23.0" />
   </ItemGroup>
 </Project>

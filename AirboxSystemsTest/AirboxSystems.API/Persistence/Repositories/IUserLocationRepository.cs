@@ -14,7 +14,7 @@ namespace AirboxSystems.API.Persistence.Repositories
         Task<IEnumerable<UserPosition>>  GetLocationHistoryAsync(int userId);
         // 4.
         Task<IEnumerable<UserPosition>> GetLocationForAllUsersAsync();
-        //    // 5.
-        //    Task<IEnumerable<LocationHistory>> GetLocationForAllUsersWithinAnAreaAsync(string area);
+        // 5.
+        Task<IEnumerable<UserPosition>> GetLocationForAllUsersWithinAnAreaAsync();
     }
 }

@@ -1,0 +1,50 @@
+networks:
+  backend:
+    driver: bridge
+services:
+  airboxsystems.api:
+    build:
+      context: /Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest
+      dockerfile: AirboxSystems.API/Dockerfile
+    depends_on:
+      mongo:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      ME_CONFIG_APIKEY: ''
+      ME_CONFIG_DBSTRING: mongodb://:@mongo:27017/
+    image: airboxsystems
+    links:
+    - mongo
+    networks:
+      backend: {}
+    ports:
+    - published: 8000
+      target: 80
+    - target: 80
+    - published: 44348
+      target: 443
+    - target: 443
+    volumes:
+    - mongostorage:/data/db:rw
+    - /Users/ricardocosta/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/ricardocosta/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+  mongo:
+    environment:
+      MONGODB_ADMIN_PASS: ''
+      MONGODB_ADMIN_USER: ''
+      MONGODB_APPLICATION_DATABASE: ''
+      MONGODB_APPLICATION_PASS: ''
+      MONGODB_APPLICATION_USER: ''
+    image: mongo:latest
+    networks:
+      backend: {}
+    ports:
+    - published: 27017
+      target: 27017
+    volumes:
+    - mongostorage:/data/db:rw
+version: '3.4'
+volumes:
+  mongostorage: {}

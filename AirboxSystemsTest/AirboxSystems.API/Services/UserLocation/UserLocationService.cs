@@ -38,20 +38,20 @@ namespace AirboxSystems.API.Services.UserLocation
             return await _userLocationRepository.GetLocationHistoryAsync(userId);
         }
 
-
-
-
         //4.	Return the current location for all users
         public async Task<IEnumerable<UserPosition>> GetLocationForAllUsersAsync()
         {
             return await _userLocationRepository.GetLocationForAllUsersAsync();
         }
 
-        // //5.   Return the current location for all users within a specified area
-        //public Task<IEnumerable<LocationHistory>> GetLocationForAllUsersWithinAnAreaAsync(string area)
-        //{
-        //    return await _userLocationRepository.GetLocationForAllUsersWithinAnAreaAsync(userId);
-        //}
+
+
+
+        //5.   Return the current location for all users within a specified area
+        public async Task<IEnumerable<UserPosition>> GetLocationForAllUsersWithinAnAreaAsync()
+        {
+            return await _userLocationRepository.GetLocationForAllUsersWithinAnAreaAsync();
+        }
 
     }
 }

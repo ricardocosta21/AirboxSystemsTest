@@ -24,3 +24,4 @@
 /Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/obj/Debug/docker-compose.dcproj.AssemblyReference.cache
 /Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
 /Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/obj/Debug/docker-compose.dcproj.CopyComplete
+/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/bin/Debug/MongoDB.Entities.dll

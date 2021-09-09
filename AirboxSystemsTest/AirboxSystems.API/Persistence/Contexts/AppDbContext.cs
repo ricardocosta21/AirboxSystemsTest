@@ -7,7 +7,6 @@ namespace AirboxSystems.API.Persistence.Contexts
     public class AppDbContext : DbContext
     {
         public DbSet<UserPosition> UserPosition { get; set; }
-        //public DbSet<LocationHistory> LocationHistory { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

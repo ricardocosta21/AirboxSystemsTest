@@ -4,14 +4,14 @@
     "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.UnitTests/AirboxSystems.UnitTests.csproj": {}
   },
   "projects": {
-    "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.UnitTests/AirboxSystems.UnitTests.csproj": {
+    "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.API/AirboxSystems.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.UnitTests/AirboxSystems.UnitTests.csproj",
-        "projectName": "AirboxSystems.UnitTests",
-        "projectPath": "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.UnitTests/AirboxSystems.UnitTests.csproj",
+        "projectUniqueName": "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.API/AirboxSystems.API.csproj",
+        "projectName": "AirboxSystems.API",
+        "projectPath": "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.API/AirboxSystems.API.csproj",
         "packagesPath": "/Users/ricardocosta/.nuget/packages/",
-        "outputPath": "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.UnitTests/obj/",
+        "outputPath": "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ricardocosta/.config/NuGet/NuGet.Config"
@@ -38,6 +38,103 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.13.1, )"
+            },
+            "MongoDB.Entities": {
+              "target": "Package",
+              "version": "[20.23.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.UnitTests/AirboxSystems.UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.UnitTests/AirboxSystems.UnitTests.csproj",
+        "projectName": "AirboxSystems.UnitTests",
+        "projectPath": "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.UnitTests/AirboxSystems.UnitTests.csproj",
+        "packagesPath": "/Users/ricardocosta/.nuget/packages/",
+        "outputPath": "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.UnitTests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ricardocosta/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.API/AirboxSystems.API.csproj": {
+                "projectPath": "/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.API/AirboxSystems.API.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.9.4, )"
@@ -47,6 +144,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.0.2, )"
+            },
+            "moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
             },
             "xunit": {
               "target": "Package",

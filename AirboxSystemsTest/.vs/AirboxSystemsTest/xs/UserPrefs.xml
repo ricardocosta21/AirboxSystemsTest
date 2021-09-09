@@ -1,46 +1,67 @@
 ﻿<Properties StartupConfiguration="{9BFE422E-BAE4-49A7-8DBD-AFA1F4DE2D4C}|Default">
   <MonoDevelop.Ide.ItemProperties.AirboxSystems.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirboxSystems.API/Persistence/Contexts/AppDbContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirboxSystems.API/Persistence/Repositories/UserLocationRepository.cs">
     <Files>
-      <File FileName="AirboxSystems.API/Persistence/Contexts/AppDbContext.cs" Line="1" Column="1" />
-      <File FileName="AirboxSystems.API/Controllers/UserLocationController.cs" />
-      <File FileName="AirboxSystems.API/Persistence/Repositories/IUnitOfWork.cs" />
-      <File FileName="AirboxSystems.API/Persistence/Repositories/BaseRepository.cs" />
-      <File FileName="AirboxSystems.API/Services/UserLocation/IUserLocationService.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="AirboxSystems.API/Services/UserLocation/UserLocationService.cs" NotebookId="1" />
-      <File FileName="AirboxSystems.API/Persistence/Repositories/IUserLocationRepository.cs" NotebookId="1" />
-      <File FileName="AirboxSystems.API/Domain/Models/UserPosition.cs" NotebookId="1" />
-      <File FileName="docker-compose.yml" NotebookId="1" />
-      <File FileName="AirboxSystems.API/appsettings.json" NotebookId="1" />
-      <File FileName="AirboxSystems.API/.env" NotebookId="1" />
-      <File FileName="AirboxSystems.API/Properties/launchSettings.json" NotebookId="1" />
-      <File FileName="docker-compose.override.yml" NotebookId="1" />
+      <File FileName="AirboxSystems.API/Persistence/Contexts/AppDbContext.cs" Line="10" Column="1" />
+      <File FileName="AirboxSystems.API/Controllers/UserLocationController.cs" Line="28" Column="1" />
+      <File FileName="AirboxSystems.API/Domain/Models/AirboxDatabaseSettings.cs" Line="1" Column="1" />
+      <File FileName="AirboxSystems.API/appsettings.json" Line="4" Column="41" />
+      <File FileName="AirboxSystems.API/Services/UserLocation/IUserLocationService.cs" Line="23" Column="87" NotebookId="1" />
+      <File FileName="AirboxSystems.API/Services/UserLocation/UserLocationService.cs" Line="21" Column="36" NotebookId="1" />
+      <File FileName="AirboxSystems.API/Persistence/Repositories/IUserLocationRepository.cs" Line="18" Column="53" NotebookId="1" />
+      <File FileName="AirboxSystems.API/Domain/Models/UserPosition.cs" Line="3" Column="1" NotebookId="1" />
+      <File FileName="AirboxSystems.API/Persistence/Repositories/UserLocationRepository.cs" Line="80" Column="68" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AirboxSystemsTest" expanded="True">
             <Node name="AirboxSystems.API" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Domain" expanded="True">
+                <Node name="Models" expanded="True" />
+              </Node>
               <Node name="Persistence" expanded="True">
-                <Node name="Contexts" expanded="True">
-                  <Node name="AppDbContext.cs" selected="True" />
+                <Node name="Contexts" expanded="True" />
+                <Node name="Repositories" expanded="True">
+                  <Node name="UserLocationRepository.cs" selected="True" />
                 </Node>
-                <Node name="Repositories" expanded="True" />
               </Node>
               <Node name="Properties" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="UserLocation" expanded="True" />
+              </Node>
             </Node>
-            <Node name="docker-compose" expanded="True" />
+            <Node name="AirboxSystems.UnitTests" expanded="True" />
+            <Node name="docker-compose" expanded="True">
+              <Node name="docker-compose.yml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="AirboxSystemsTest" expanded="True">
+            <Node name="AirboxSystems.UnitTests" expanded="True">
+              <Node name="AirboxSystems.UnitTests" expanded="True">
+                <Node name="UserLocationControllerTests" expanded="True">
+                  <Node name="GetCurrentUserLocationAsync_WithInvalidItem_ReturnsNull" selected="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.AirboxSystems.UnitTests FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.AirboxSystems.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystemsTest.IntegrationTests/UserLocationControllerTests.cs" relfile="AirboxSystemsTest.IntegrationTests/UserLocationControllerTests.cs" line="39" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

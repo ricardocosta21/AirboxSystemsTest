@@ -19,7 +19,7 @@ namespace AirboxSystems.API.Services.UserLocation
         //4.	Return the current location for all users
         public Task<IEnumerable<UserPosition>> GetLocationForAllUsersAsync();
 
-        // //5.   Return the current location for all users within a specified area
-        //public Task<IEnumerable<LocationHistory>> GetLocationForAllUsersWithinAnAreaAsync(string area);
+        //5.   Return the current location for all users within a specified area
+        public Task<IEnumerable<UserPosition>> GetLocationForAllUsersWithinAnAreaAsync();
     }
 }

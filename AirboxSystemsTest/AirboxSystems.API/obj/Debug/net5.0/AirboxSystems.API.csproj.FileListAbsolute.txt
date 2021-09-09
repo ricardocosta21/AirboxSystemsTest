@@ -45,3 +45,4 @@
 /Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.API/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.API/bin/Debug/net5.0/Newtonsoft.Json.dll
 /Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.API/bin/Debug/net5.0/Newtonsoft.Json.Bson.dll
+/Users/ricardocosta/dev/AirboxSystemsTest/AirboxSystemsTest/AirboxSystems.API/bin/Debug/net5.0/MongoDB.Entities.dll
